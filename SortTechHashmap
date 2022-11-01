@@ -1,0 +1,25 @@
+import java.util.*;
+public class Counts
+{
+	
+	public static void main(String[] args)
+	{
+		String word = "Pacific Ocean";
+		char letters[] = word.toCharArray();
+		HashMap<Character,Integer> count = new HashMap<Character,Integer>();
+		
+		for(char chars : letters)
+			{
+				if(count.containsKey(chars))
+					{
+						count.put(chars , count.get(chars)+1);
+					}
+				else
+					{
+						count.put(chars , 1);
+					}
+			}
+		System.out.println(count);
+		}
+}
+		
